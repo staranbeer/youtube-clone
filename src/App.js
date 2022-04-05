@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  MdArchitecture,
+  MdArrowForwardIos,
+  MdArrowRight,
+  MdChevronRight,
+} from "react-icons/md";
+
+import Header from "./components/ui/Header";
+import Tag from "./components/utility/Tag";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="font-roboto ">
+      <Header />
+
+      <main className="bg-youtube-900 h-[30000px]"></main>
     </div>
   );
 }
