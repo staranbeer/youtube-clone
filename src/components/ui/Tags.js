@@ -1,6 +1,6 @@
 import React from "react";
 import { MdChevronRight } from "react-icons/md";
-import Tag from "./components/utility/Tag";
+import Tag from "../utility/Tag";
 
 function Tags() {
   return (
