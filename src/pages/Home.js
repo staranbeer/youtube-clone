@@ -13,8 +13,8 @@ function Home() {
         undefined,
         undefined,
         undefined,
-      ].map((i) => {
-        return <Card />;
+      ].map((i, index) => {
+        return <Card key={index} />;
       })}
     </div>
   );

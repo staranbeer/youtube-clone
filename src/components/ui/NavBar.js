@@ -12,28 +12,28 @@ const pages = [
   },
 ];
 function NavBar({ closeMenu }) {
-  const [currentPage, setCurrentPage] = useState("");
+  const [currentPage, setCurrentPage] = useState(window.location.pathname);
 
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     closeMenu();
     setCurrentPage(window.location.pathname);
   }
-  console.log(window.location.pathname);
-
   return (
-    <nav className="mt-6 space-y-1 text-sm  w-full">
+    <nav className="mt-6  text-sm  w-full">
       {pages.map((i) => {
         return (
-          <Link
-            onClick={handleClick}
-            to={i.route}
-            className={`flex py-2 pl-7 hover:bg-youtube-600 items-center gap-7 transition-colors ease-in ${
-              currentPage === i.route ? "bg-youtube-500" : ""
-            }`}
-            key={i.name}>
-            <div className="w-6">{i.icon}</div>
-            <span>{i.name}</span>
-          </Link>
+          <button onClick={handleClick} className="block w-full">
+            <Link
+              to={i.route}
+              className={`flex py-2 pl-7 hover:bg-youtube-600 items-center gap-7 transition-colors ease-in ${
+                currentPage === i.route ? "bg-youtube-500" : ""
+              }`}
+              key={i.name}>
+              <span className="w-6">{i.icon}</span>
+              <span>{i.name}</span>
+            </Link>
+          </button>
         );
       })}
     </nav>

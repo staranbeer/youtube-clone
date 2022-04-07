@@ -25,8 +25,8 @@ function Header() {
             className="focus:bg-youtube-500 rounded-full p-2">
             <MdMenu className="text-white " size={24} color="white" />
           </button>
-          <Link to={"/"}>
-            <img src={logo} alt="" className="h-5" />
+          <Link to={"/"} className="shrink-0">
+            <img src={logo} alt="" className="h-5 " />
           </Link>{" "}
         </div>
 
