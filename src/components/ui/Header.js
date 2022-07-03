@@ -15,14 +15,15 @@ function Header() {
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0">
+    <div className="fixed top-0 left-0 right-0 z-50">
       {/* upper header */}
 
       <header className="py-2 px-5 text-white bg-youtube-800 flex items-center justify-between border-b border-gray-700  ">
         <div className="left flex items-center gap-5 ">
           <button
             onClick={handleMenuOpen}
-            className="focus:bg-youtube-500 rounded-full p-2">
+            className="focus:bg-youtube-500 rounded-full p-2"
+          >
             <MdMenu className="text-white " size={24} color="white" />
           </button>
           <Link to={"/"} className="shrink-0">

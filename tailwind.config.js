@@ -1,6 +1,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    screens: {
+      youtubeSm: "496px",
+      youtubeMd: "870px",
+      youtubeLg: "1130px",
+    },
     extend: {
       fontFamily: {
         roboto: ["Roboto", "font-sans"],
