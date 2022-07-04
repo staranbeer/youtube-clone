@@ -7,6 +7,8 @@ import { RiVideoAddLine } from "react-icons/ri";
 import { BsGrid3X3Gap, BsBell } from "react-icons/bs";
 import Tags from "./Tags";
 import { Link } from "react-router-dom";
+import Input from "../utility/Input";
+import Search from "../utility/Search";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,11 +17,11 @@ function Header() {
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
+    <div className="">
       {/* upper header */}
 
-      <header className="py-2 px-5 text-white bg-youtube-800 flex items-center justify-between border-b border-gray-700  ">
-        <div className="left flex items-center gap-5 ">
+      <header className="py-2 px-5 text-white bg-youtube-800 flex items-center justify-center border-b border-gray-700  ">
+        <div className="left flex-1 flex items-center gap-5 basis-2/5">
           <button
             onClick={handleMenuOpen}
             className="focus:bg-youtube-500 rounded-full p-2"
@@ -30,8 +32,11 @@ function Header() {
             <img src={logo} alt="" className="h-5 " />
           </Link>{" "}
         </div>
+        <div className="center flex-1 basis-1/2">
+          <Search />
+        </div>
 
-        <div className="right flex gap-5 items-center">
+        <div className="right justify-end flex gap-5 items-center flex-1 basis-2/5">
           <MdSearch size={24} />
           <MdMic size={24} />
           <RiVideoAddLine size={24} />

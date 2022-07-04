@@ -1,6 +1,5 @@
 import React from "react";
 import faker from "@faker-js/faker";
-import { findAllInRenderedTree } from "react-dom/test-utils";
 import { motion } from "framer-motion";
 
 function Card() {
