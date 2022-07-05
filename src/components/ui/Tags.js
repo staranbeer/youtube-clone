@@ -1,5 +1,4 @@
 import React from "react";
-import { MdChevronRight } from "react-icons/md";
 import Tag from "../utility/Tag";
 
 function Tags() {
@@ -19,9 +18,6 @@ function Tags() {
       ].map(({ name }) => {
         return <Tag name={name} key={name} />;
       })}
-      <div className=" fixed right-0 bg-gradient-to-l from-youtube-800 via-youtube-800 p-3 pl-20 pr-6  ">
-        <MdChevronRight size={24} className="text-white  cursor-pointer " />
-      </div>
     </div>
   );
 }

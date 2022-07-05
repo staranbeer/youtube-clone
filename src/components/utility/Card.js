@@ -5,11 +5,11 @@ import { motion } from "framer-motion";
 function Card() {
   return (
     <motion.div className="card max-w-xs">
-      <div className="h-0 pb-[56%] pt-full relative card__thumbnail ">
+      <div className="h-0 pb-[56.2%] relative card__thumbnail ">
         <img
-          src={faker.image.avatar()}
+          src={faker.image.city()}
           alt=""
-          className="absolute w-full h-full inset-0 object-cover"
+          className="absolute w-full h-full object-cover"
         />
       </div>
       <div className="card__about flex items-start gap-4 mt-3">

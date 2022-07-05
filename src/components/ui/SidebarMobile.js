@@ -4,22 +4,27 @@ import { MdMenu } from "react-icons/md";
 import NavBar from "./NavBar";
 import logo from "./../../images/yt_dark.png";
 
-function Sidebar({ isMenuOpen, closeMenu }) {
+function SidebarMobile({ isOpen, setIsOpen }) {
+  function closeMenu() {
+    setIsOpen(false);
+  }
+
   return (
     <>
       <motion.div
         animate={{
-          width: isMenuOpen ? 240 : 0,
-          translateX: isMenuOpen ? 80 : -80,
+          translateX: isOpen ? 0 : "-100%",
         }}
         transition={{ bounce: false, ease: "easeInOut", delay: 0.03 }}
-        className="py-2  fixed top-0 -left-20 z-20 min-h-screen text-white bg-youtube-800 overflow-hidden">
+        className="py-2 youtubeMd:hidden fixed top-0  z-20 min-h-screen text-white bg-youtube-800 overflow-hidden "
+      >
         {/* sidebar header */}
 
         <div className="flex items-center px-5 gap-5">
           <button
             onClick={closeMenu}
-            className="focus:bg-youtube-500 rounded-full p-2">
+            className="focus:bg-youtube-500 rounded-full p-2"
+          >
             <MdMenu className="text-white " size={24} color="white" />
           </button>
           <Link to={"/"} onClick={closeMenu}>
@@ -34,14 +39,15 @@ function Sidebar({ isMenuOpen, closeMenu }) {
 
       {/* sidebar backdrop */}
 
-      {isMenuOpen && (
+      {isOpen && (
         <motion.div
           animate={{ opacity: 0.6 }}
           className="overlay fixed h-screen w-screen top-0 left-0 bg-black  z-10 opacity-0"
-          onClick={closeMenu}></motion.div>
+          onClick={closeMenu}
+        ></motion.div>
       )}
     </>
   );
 }
 
-export default Sidebar;
+export default SidebarMobile;

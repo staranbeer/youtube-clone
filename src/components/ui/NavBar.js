@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { MdHistory, MdHome, MdWatchLater } from "react-icons/md";
+import { MdHistory, MdHome, MdHomeFilled, MdWatchLater } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const pages = [
-  { name: "Home", route: "/", icon: <MdHome size={24} /> },
+  { name: "Home", route: "/", icon: <MdHomeFilled size={24} /> },
   { name: "History", route: "/history", icon: <MdHistory size={24} /> },
   {
     name: "Watch Later",
@@ -29,7 +29,8 @@ function NavBar({ closeMenu }) {
               className={`flex py-2 pl-7 hover:bg-youtube-600 items-center gap-7 transition-colors ease-in ${
                 currentPage === i.route ? "bg-youtube-500" : ""
               }`}
-              key={i.name}>
+              key={i.name}
+            >
               <span className="w-6">{i.icon}</span>
               <span>{i.name}</span>
             </Link>

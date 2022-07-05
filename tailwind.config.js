@@ -5,8 +5,12 @@ module.exports = {
       youtubeSm: "496px",
       youtubeMd: "870px",
       youtubeLg: "1130px",
+      youtubeSidebarMobile: "793px",
     },
     extend: {
+      fontSize: {
+        xxs: "10px",
+      },
       fontFamily: {
         roboto: ["Roboto", "font-sans"],
       },

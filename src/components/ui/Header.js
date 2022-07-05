@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { MdMenu, MdMic, MdSearch } from "react-icons/md";
-import Sidebar from "./Sidebar";
+import Sidebar from "./SidebarMobile";
 
 import logo from "./../../images/yt_dark.png";
 import { RiVideoAddLine } from "react-icons/ri";
@@ -10,21 +10,22 @@ import { Link } from "react-router-dom";
 import Input from "../utility/Input";
 import Search from "../utility/Search";
 
-function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-  function handleMenuOpen() {
-    setIsOpen((i) => !i);
-  }
-
+function Header({ toggleSidebar, toggleMobileSidebar }) {
   return (
     <div className="">
-      {/* upper header */}
-
       <header className="py-2 px-5 text-white bg-youtube-800 flex items-center justify-center border-b border-gray-700  ">
         <div className="left flex-1 flex items-center gap-5 basis-2/5">
+          {/* Sidebar Toggle for mobile */}
           <button
-            onClick={handleMenuOpen}
-            className="focus:bg-youtube-500 rounded-full p-2"
+            onClick={() => toggleMobileSidebar((i) => !i)}
+            className="focus:bg-youtube-500 rounded-full p-2 youtubeSidebarMobile:hidden"
+          >
+            <MdMenu className="text-white " size={24} color="white" />
+          </button>
+          {/* Sidebar Toggle for desktop */}
+          <button
+            onClick={() => toggleSidebar((i) => !i)}
+            className="focus:bg-youtube-500 rounded-full p-2 "
           >
             <MdMenu className="text-white " size={24} color="white" />
           </button>
@@ -45,14 +46,6 @@ function Header() {
           <div className="h-8 w-8 bg-violet-600 rounded-full"></div>
         </div>
       </header>
-
-      {/* lower header */}
-
-      <Tags />
-
-      {/* sidebar */}
-
-      <Sidebar isMenuOpen={isOpen} closeMenu={handleMenuOpen} />
     </div>
   );
 }

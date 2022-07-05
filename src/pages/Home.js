@@ -1,10 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import Tags from "../components/ui/Tags";
 import Card from "../components/utility/Card";
 
-function Home() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(true);
-
+function Home({ isSidebarOpen }) {
   return (
     <div className="flex ">
       {isSidebarOpen && (
