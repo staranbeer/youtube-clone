@@ -6,13 +6,15 @@ import LikedVideos from "./components/pages/LikedVideos";
 
 function App() {
   return (
-    <div className="font-roboto text-gray-300 min-h-screen bg-youtube-900">
+    <div className="font-roboto text-gray-300 min-h-screen bg-youtube-900 ">
       <Header />
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/liked" element={<LikedVideos />} />
-        <Route path="/history" element={<History />} />
-      </Routes>
+      <div className="pt-32">
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+          <Route path="/liked" element={<LikedVideos />} />
+          <Route path="/history" element={<History />} />
+        </Routes>
+      </div>
     </div>
   );
 }
