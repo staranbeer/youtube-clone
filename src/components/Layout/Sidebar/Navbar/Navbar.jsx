@@ -3,19 +3,19 @@ import NavLink from "./NavLink";
 import { MdHistory, MdOutlineHome, MdOutlineThumbUp } from "react-icons/md";
 
 const navLinks = [
-  { name: "Home", path: "/", icon: <MdOutlineHome size={24} /> },
-  { name: "History", path: "/history", icon: <MdHistory size={24} /> },
+  { name: "Home", path: "/", icon: <MdOutlineHome size={28} /> },
+  { name: "History", path: "/history", icon: <MdHistory size={28} /> },
   {
     name: "Liked videos",
     path: "/liked",
-    icon: <MdOutlineThumbUp size={24} />,
+    icon: <MdOutlineThumbUp size={28} />,
   },
 ];
-const Navbar = () => {
+const Navbar = ({ closeSidebar }) => {
   return (
     <nav className="mt-3 ">
       {navLinks.map(({ name, icon, path }) => (
-        <NavLink to={path} key={name} icon={icon}>
+        <NavLink onClick={closeSidebar} to={path} key={name} icon={icon}>
           {name}
         </NavLink>
       ))}

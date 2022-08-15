@@ -2,34 +2,37 @@ import { motion } from "framer-motion";
 import logo from "./../../../images/yt_dark.png";
 import { MdMenu } from "react-icons/md";
 import Navbar from "./Navbar/Navbar";
+import { Link } from "react-router-dom";
 
-const Sidebar = ({ isOpen, toggleSidebar }) => {
+const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
     <>
       <motion.div
-        className="z-20 fixed left-0 inline-block top-0 -translate-x-full w-[240px] bg-youtube-800 h-screen"
+        className="z-[1000] fixed left-0 top-0 -translate-x-full w-[240px] bg-youtube-800 h-screen"
         animate={{ translateX: isOpen ? 0 : "-100%" }}
         transition={{ duration: "0.3" }}
       >
         <header className="pl-4 ">
           <div className="left flex gap-7 items-center">
-            <button onClick={toggleSidebar}>
-              <MdMenu size={24} className="" />
+            <button onClick={closeSidebar}>
+              <MdMenu size={28} className="" />
             </button>
-            <div className="py-[18px]">
+            <Link to={"/"} onClick={closeSidebar} className="py-[18px]">
               <img src={logo} alt="logo" className="h-5 w-[90px]" />
-            </div>
+            </Link>
           </div>
         </header>
-        <Navbar />
+        <Navbar closeSidebar={closeSidebar} />
       </motion.div>
 
-      {isOpen && (
-        <div
-          onClick={toggleSidebar}
-          className="overlay fixed h-screen w-screen bg-black overflow-hidden opacity-50 left-0 z-10 top-0"
-        ></div>
-      )}
+      <motion.div
+        animate={{
+          opacity: isOpen ? 0.6 : 0,
+          pointerEvents: isOpen ? "all" : "none",
+        }}
+        onClick={closeSidebar}
+        className="overlay fixed h-screen w-screen bg-black overflow-hidden opacity-50 left-0 z-10 top-0"
+      ></motion.div>
     </>
   );
 };
