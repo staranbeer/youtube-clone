@@ -20,9 +20,12 @@ const Header = () => {
     setIsOpen(true);
   }
   return (
-    <header className="fixed w-full z-10 bg-youtube-800 border-b border-gray-700 flex justify-between px-4 ">
-      <div className="left flex gap-7 items-center">
-        <button onClick={openSidebar}>
+    <header className="max-h-[57px] fixed w-full z-10 bg-youtube-800 border-b border-gray-700 flex justify-between px-4 ">
+      <div className="left flex gap-7  items-center">
+        <button
+          onClick={openSidebar}
+          className="p-1 m-1 rounded-full hover:bg-red-300"
+        >
           <MdMenu size={28} className="" />
         </button>
         <Link to={"/"} className="py-[18px]">

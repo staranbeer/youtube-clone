@@ -28,9 +28,9 @@ function App() {
             <div className="text-[10px] mt-2">Explore</div>
           </Link>
         </nav>
-        <div>
+        <div className="w-full">
           <Tags />
-          <div className="  pt-32">
+          <div className="  pt-[115px]">
             <Routes>
               <Route path="/" element={<Homepage />} />
               <Route path="/liked" element={<LikedVideos />} />
