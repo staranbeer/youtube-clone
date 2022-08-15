@@ -13,12 +13,14 @@ const navLinks = [
 ];
 const Navbar = ({ closeSidebar }) => {
   return (
-    <nav className="mt-3 ">
-      {navLinks.map(({ name, icon, path }) => (
-        <NavLink onClick={closeSidebar} to={path} key={name} icon={icon}>
-          {name}
-        </NavLink>
-      ))}
+    <nav className="mt-3">
+      <ul>
+        {navLinks.map(({ name, icon, path }) => (
+          <NavLink onClick={closeSidebar} to={path} key={name} icon={icon}>
+            {name}
+          </NavLink>
+        ))}
+      </ul>
     </nav>
   );
 };

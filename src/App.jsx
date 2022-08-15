@@ -11,7 +11,7 @@ function App() {
     <div className="font-roboto text-gray-300 min-h-screen bg-youtube-900 ">
       <Header />
       <div className="flex">
-        <nav className="youtubeSidebarMobile:block hidden mt-[57px] h-screen max-w-[75px]  bg-youtube-800 before:w-[76px] before:h-3 relative before:-top-1 before:bg-youtube-800 before:absolute  before:z-10">
+        <nav className="youtubeSidebarMobile:block hidden mt-[57px] h-screen max-w-[75px]  bg-youtube-800  fixed  z-[1] ">
           <Link
             to={"/"}
             className="flex flex-col items-center hover:bg-youtube-600  p-6 py-3 mt-1"

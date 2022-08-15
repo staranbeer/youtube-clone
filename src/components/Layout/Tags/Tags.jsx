@@ -6,7 +6,7 @@ const Tags = () => {
   const [active, setActive] = useState("All");
 
   return (
-    <div className="z-0 bg-youtube-800 px-5 border-b border-youtube-600 py-3 gap-2 overflow-x-scroll scrollbar-none cursor-pointer flex top-[57px] fixed w-full ">
+    <div className=" bg-youtube-800 px-5 border-b border-youtube-600 py-3 gap-2 overflow-x-scroll scrollbar-none cursor-pointer flex top-[57px] fixed w-full youtubeSidebarMobile:left-[75px] z-[1]">
       <button
         className={`tag bg-youtube-600 border border-youtube-500 p-3 py-[3px] rounded-full inline-block  transition ${
           active === "All"

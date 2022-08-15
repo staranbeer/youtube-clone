@@ -1,10 +1,10 @@
 const Homepage = () => {
   return (
-    <div className=" ">
-      <div className="videos mx-auto max-w-max py-5 gap-10 grid youtubeSm:grid-cols-2 youtubeMd:grid-cols-3 justify-items-stretch youtubeSm:gap-3  youtubeLg:grid-cols-4 ">
-        {[...Array(6)].map((_, i) => (
-          <div className="video ">
-            <div className="video__thumbnail youtubeMd:max-w-[360px]  max-w-[320px] aspect-video bg-red-400  ">
+    <div className="overflow-x-hidden ">
+      <div className="videos   mx-auto max-w-max py-5 grid youtubeSm:grid-cols-2 youtubeMd:grid-cols-3 justify-items-stretch youtubeSm:gap-3  youtubeLg:grid-cols-4 youtubeSidebarMobile:translate-x-9  px-16">
+        {[...Array(26)].map((_, i) => (
+          <div className="video  mb-5" key={i}>
+            <div className="video__thumbnail youtubeLg:max-w-[360px]  max-w-[320px] aspect-video bg-red-400 ">
               <img
                 className="w-full  h-full object-cover"
                 src="https://i.ytimg.com/vi/QH2-TGUlwu4/hqdefault.jpg"

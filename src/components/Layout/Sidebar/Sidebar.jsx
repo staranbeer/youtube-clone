@@ -8,7 +8,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
     <>
       <motion.div
-        className="z-[1000] fixed left-0 top-0 -translate-x-full w-[240px] bg-youtube-800 h-screen"
+        className="z-[100000] fixed left-0 top-0 -translate-x-full w-[240px] bg-youtube-800 h-screen"
         animate={{ translateX: isOpen ? 0 : "-100%" }}
         transition={{ duration: "0.3" }}
       >

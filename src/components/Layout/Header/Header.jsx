@@ -24,11 +24,11 @@ const Header = () => {
       <div className="left flex gap-7  items-center">
         <button
           onClick={openSidebar}
-          className="p-1 m-1 rounded-full hover:bg-red-300"
+          className="p-1.5 m-1 rounded-full active:bg-youtube-500"
         >
           <MdMenu size={28} className="" />
         </button>
-        <Link to={"/"} className="py-[18px]">
+        <Link to={"/"} className="py-[18px] shrink-0">
           <img src={logo} alt="logo" className="h-5 w-[90px]" />
         </Link>
       </div>
